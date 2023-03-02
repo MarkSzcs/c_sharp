@@ -19,6 +19,7 @@ class EntryUser
         System.Console.WriteLine(user2.usernameData);
         System.Console.WriteLine(user2.passwordData);
         System.Console.WriteLine(user2.ID)
+        Utilities.ColorfulWriteLine(user.usernameData, ConsoleColor.DarkRed);
 
     }
 }

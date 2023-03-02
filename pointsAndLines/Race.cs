@@ -1,0 +1,5 @@
+enum Race
+{
+    Earthling,
+    Martian
+}

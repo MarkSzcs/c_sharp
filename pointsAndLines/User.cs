@@ -12,10 +12,14 @@ namespace PointAndLine
         //readonly is a type of constant that means that the furthest it can be modified is the constructor
         //and it can only be assigned once
         public readonly int ID;
+        private readonly int HEIGHT;
         //const is a type of constant that can only be defined at declaration and its value can only be assigned once
         public const string BLOODTYPE = "AB";
         private string username;
         private string password;
+        
+        public Race race;
+
 
         public string passwordData
         {
@@ -64,6 +68,18 @@ namespace PointAndLine
             this.username = username;
             this.password = password;
             ID = ++userCount;
+
+            if(password.Length<9)
+            {
+                race = Race.Earthling;
+                HEIGHT = 170;
+                
+            }
+            else
+            {
+                race = Race.Martian;
+                HEIGHT = 120;
+            }
         }
     } 
 }
